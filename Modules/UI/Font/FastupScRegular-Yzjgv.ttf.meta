@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c9fc5b213730eec499ff27c38426ab0e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fastup SC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7592b7a3acb8d5b4099a12733ca6cc0a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

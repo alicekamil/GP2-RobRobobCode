@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ba779380459af458c75e5174b2339f, type: 3}
+  m_Name: GreenAmmo
+  m_EditorClassIdentifier: 
+  _timeToDeliver: 35
+  _cooldown: 5
+  _itemId: ammo_b
+  _resultIcon: {fileID: 21300000, guid: 855eed316fb64744a8fb6df6b7071b33, type: 3}
+  _recipeIcon: {fileID: 21300000, guid: 0c907c91f2273b548812938d924ca633, type: 3}
+  _modifierIcon: {fileID: 21300000, guid: 350af7f7c1e451942ad0b1368c3a2ac8, type: 3}
+  _wallCount: 2
+  _fireCount: 0
+  _scoreReward: 5

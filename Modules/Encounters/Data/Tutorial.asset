@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520ecfbe316e480e89b8dd158a2f5c04, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  _scoreMultiplier: 1
+  _enemyHp: 1
+  _normalTaskMultiplier: 1
+  _specialTaskMultiplier: 1
+  _cooldownMultiplier: 1
+  _availableTasks:
+  - {fileID: 11400000, guid: 9d874908fbb283546b34c76189c0cf73, type: 2}
+  _allowSpecialAmmo: 0
+  _allowFires: 0

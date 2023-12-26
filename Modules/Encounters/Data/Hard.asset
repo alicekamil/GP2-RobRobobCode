@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520ecfbe316e480e89b8dd158a2f5c04, type: 3}
+  m_Name: Hard
+  m_EditorClassIdentifier: 
+  _scoreMultiplier: 4
+  _enemyHp: 4
+  _normalTaskMultiplier: 0.75
+  _specialTaskMultiplier: 0.75
+  _cooldownMultiplier: 0.75
+  _availableTasks:
+  - {fileID: 11400000, guid: 30087f95fc0fab44cb89319c2d97449c, type: 2}
+  - {fileID: 11400000, guid: 4de8a32402e314a4981c0ccfb9671dfa, type: 2}
+  - {fileID: 11400000, guid: 6a8732bd4dd907f448d480bba418f9ae, type: 2}
+  _allowSpecialAmmo: 1
+  _allowFires: 1
