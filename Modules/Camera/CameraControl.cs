@@ -7,15 +7,15 @@ using UnityEngine;
 public class CameraControl : MonoSingleton<CameraControl>
 {
     public float m_DampTime = 0.2f; //Approx time for camera movement                 
-    public float m_ScreenEdgeBuffer = 4f; //Buffer for the players to be in screen           
+    public float m_ScreenEdgeBuffer = 4f;          
     public float m_MinSize = 6.5f; // Minimum zoom for the camera                 
     public Transform OverrideTarget;
 
-    private List<Transform> m_Targets; // Array of transforms, players
-    private Camera m_Camera; // Reference to camera                        
+    private List<Transform> m_Targets; 
+    private Camera m_Camera;                        
     private float m_ZoomSpeed; // Damp variable for zoom speed                      
     private Vector3 m_MoveVelocity; // Damp variable for movevelocity                  
-    private Vector3 m_DesiredPosition; // Average of both players position= desired position. CameraRig = desiredposition = follow  
+    private Vector3 m_DesiredPosition; // Average of both players position
     private CameraShake _cameraShake;
 
     public Camera Camera => m_Camera;
@@ -39,28 +39,28 @@ public class CameraControl : MonoSingleton<CameraControl>
     
     private void CameraMove()
     {
-        FindAveragePosition(); // Find average position
+        FindAveragePosition(); 
 
-        transform.position = Vector3.SmoothDamp(transform.position, m_DesiredPosition, ref m_MoveVelocity, m_DampTime); // Set that position, and make the convertions smoothly
+        transform.position = Vector3.SmoothDamp(transform.position, m_DesiredPosition, ref m_MoveVelocity, m_DampTime); 
     }
 
     private void FindAveragePosition()
     {
         if (OverrideTarget == null)
         {
-            Vector3 averagePos = new Vector3(); // New vector
-            int numTargets = 0; // Number of targets that should be averaged
+            Vector3 averagePos = new Vector3();
+            int numTargets = 0; // Number of players
 
-            for (int i = 0; i < m_Targets.Count; i++) // Loop through amount of players
+            for (int i = 0; i < m_Targets.Count; i++) 
             {
-                if (!m_Targets[i].gameObject.activeSelf) // Check if the gameobject(player)is deactivated. Null-check. Dont want to follow "dead" player
-                    continue; // Back to for loop
+                if (!m_Targets[i].gameObject.activeSelf) // Prevent following dead player
+                    continue; 
 
-                averagePos += m_Targets[i].position; // Add position to the averagepos
-                numTargets++; // Increment number of targets
+                averagePos += m_Targets[i].position; // New pos
+                numTargets++; 
             }
 
-            if (numTargets > 0) // If there are active targets
+            if (numTargets > 0) // Avg
                 averagePos /= numTargets;
 
             averagePos.y = transform.position.y; // Dont change the y-position(Inherit camera rig y-position). Safety
